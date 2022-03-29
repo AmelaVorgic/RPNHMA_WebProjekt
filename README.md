@@ -23,6 +23,6 @@ One of the features application offers is ability to log in as a user and use fo
 - Visual Studio Code
 
 ## Authors
-[Amela Vorgic](https://github.com/AmelaVorgic)
-[Valentin Loboda](https://github.com/vvvaaalll)
+[Amela Vorgic](https://github.com/AmelaVorgic) \
+[Valentin Loboda](https://github.com/vvvaaalll) \
 [Fran Zamaklar](https://github.com/franzamaklar)
