@@ -3,11 +3,8 @@ package com.rpnhma.rpnhma_webApplication.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-
 @Data
-public class LoginUserDto {
-
-
+public class UserDto {
 
         @JsonProperty("firstName")
         private String firstName;
@@ -22,5 +19,6 @@ public class LoginUserDto {
         private String phone;
 
     }
+
 
 
