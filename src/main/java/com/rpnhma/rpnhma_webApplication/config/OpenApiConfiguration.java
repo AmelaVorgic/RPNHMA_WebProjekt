@@ -27,8 +27,12 @@ public class OpenApiConfiguration {
     @Bean
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
-                .group("User Management")
-                .pathsToMatch("/api/user/**")
+                .group("topics")
+                .pathsToMatch("/topics/**")
+                .group("topic")
+                .pathsToMatch("/topic/**")
+                .group("answers")
+                .pathsToMatch("/answers/**")
                 .build();
     }
 }
