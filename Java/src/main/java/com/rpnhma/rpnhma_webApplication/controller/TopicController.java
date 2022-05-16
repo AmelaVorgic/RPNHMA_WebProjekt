@@ -4,6 +4,7 @@ import com.rpnhma.rpnhma_webApplication.model.Answer;
 import com.rpnhma.rpnhma_webApplication.model.Topic;
 import com.rpnhma.rpnhma_webApplication.repositpry.AnswerRepository;
 import com.rpnhma.rpnhma_webApplication.repositpry.TopicRepository;
+import com.rpnhma.rpnhma_webApplication.repositpry.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -29,11 +30,12 @@ public class TopicController {
     private final TopicRepository topicRepository;
     private final AnswerRepository answerRepository;
 
+
     @GetMapping("topic/{id}")
     public String displayTopic(@PathVariable String id,  Model model) {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username = ((UserDetails)principal).getUsername();
-        Long idUser = userRepository.getUserByUsername(username).getId();
+        String idUser = userRepository.getUserByUsername(username).getId();
 
         Topic topic = topicRepository.findTopicById(Long.valueOf(id));
         List<Answer> answers = answerRepository.findAnswerByTopic_Id(Long.valueOf(id));
