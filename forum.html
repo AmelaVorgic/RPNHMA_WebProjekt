@@ -21,7 +21,6 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -66,11 +65,13 @@
     </section>
 
     <section class="inner-page">
-      <div class="container">
-        <p>
-        Forum
-        </p>
+      <div class="container" style="border: 1px solid rgba(248, 200, 225, 0.15); padding: 10px; border-radius: 4%;">
+        Topic
+        <div class="forumTable">
+        </div>
       </div>
+
+      <input type="button" value="Generate a row" onclick="generate_row()">
     </section>
 
   </main>
@@ -97,8 +98,18 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function generate_row(){
+     $( ".forumTable" ).
+     append( $("<div>Tekst</div>")
+     .css("background-color", "rgba(221, 215, 218, 0.64)")
+     .css("padding", "10px")
+     .css("margin-top","10px") );
+    }
+  </script>
 
 </body>
 
