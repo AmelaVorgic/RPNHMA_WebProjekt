@@ -13,26 +13,51 @@ public class OpenApiConfiguration {
     @Bean
     public OpenAPI springShopOpenAPI() {
         return new OpenAPI()
+
                 .info(
                         new Info()
-                                .title("User Management")
-                                .description("User CRUD")
+                                .title("RPNHMA_forum")
+                                .description("Web programiranje projekt")
                                 .version("1.0")
                                 .license(
                                         new License()
                                                 .name("Apache 2.0")
                                                 .url("http://www.apache.org/licenses/LICENSE-2.0")));
+
     }
 
     @Bean
-    public GroupedOpenApi publicApi() {
+    public GroupedOpenApi AuthApi() {
         return GroupedOpenApi.builder()
-                .group("topics")
-                .pathsToMatch("/topics/**")
-                .group("topic")
-                .pathsToMatch("/topic/**")
-                .group("answers")
-                .pathsToMatch("/answers/**")
+                .group("Authentication")
+                .pathsToMatch("/token/**")
+
                 .build();
     }
+    @Bean
+    public GroupedOpenApi CommentApi() {
+        return GroupedOpenApi.builder()
+                .group("Comments")
+                .pathsToMatch("/comments/**")
+
+                .build();
+    }
+    @Bean
+    public GroupedOpenApi PostsApi() {
+        return GroupedOpenApi.builder()
+                .group("Posts")
+                .pathsToMatch("/posts/**")
+
+                .build();
+    }
+    @Bean
+    public GroupedOpenApi UsersApi() {
+        return GroupedOpenApi.builder()
+                .group("Users")
+                .pathsToMatch("/users/**")
+
+                .build();
+    }
+
+
 }
