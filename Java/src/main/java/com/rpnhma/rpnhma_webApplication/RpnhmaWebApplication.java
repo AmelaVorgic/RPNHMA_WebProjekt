@@ -13,8 +13,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -31,7 +29,7 @@ public class RpnhmaWebApplication {
 		SpringApplication.run(RpnhmaWebApplication.class, args);
 	}
 
-/*	@Bean
+	@Bean
 	CommandLineRunner runner(CommentService commentService, RoleRepository roleRepository, UserService userService, UserRepository userRepository) {
 		return args -> {
 
@@ -76,6 +74,6 @@ public class RpnhmaWebApplication {
 			roleRepository.save(adminRole);
 			roleRepository.save(userRole);
 		};
-	}*/
+	}
 
 }

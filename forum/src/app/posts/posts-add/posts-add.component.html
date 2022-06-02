@@ -1,0 +1,63 @@
+<div class="container-fluid h-100">
+    <div class="row mt-4 justify-content-center align-items-center h-auto">
+        <div class="col-lg-10">
+            <form (ngSubmit)="onAddPost(fileInput.files)" #f="ngForm">
+                <h2 class="text-center mb-4 alert alert-secondary">Add post</h2>
+                <div id="post-data">
+                    <div class="text-center">
+                        <label for="title" class="font-weight-bold">Title:</label>
+                        <input
+                            type="text"
+                            class="form-control font-weight-bold"
+                            id="title"
+                            required
+                            ngModel
+                            name="title">
+                    </div>
+                    <div class="form-group text-center mt-4">
+                        <label for="content" class="font-weight-bold">Content:</label>
+                        <textarea
+                            class="form-control"
+                            id="content"
+                            rows="12"
+                            required
+                            ngModel
+                            name="content"></textarea>
+                    </div>
+                    <label for="categories"
+                           class="row justify-content-center h-auto font-weight-bold">Category:</label>
+                    <div id="categories"
+                         class="row mt-4 justify-content-center h-auto mb-2"
+                         ngModelGroup="categories"
+                         name="categories">
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <mat-checkbox
+                                    color="primary"
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="celebrity"
+                                    ngModel
+                                    name="celebrity"
+                                >Tarantulas
+                                </mat-checkbox>
+                            </div>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="imagePost" class="font-weight-light">Upload image (max 1 MB)</label>
+                        <input type="file" class="form-control-file" id="imagePost" accept="image/*" #fileInput
+                               required>
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn btn-outline-primary btn-lg col-lg-3 mx-auto d-block mb-4"
+                        [disabled]="!f.valid">Post
+                    </button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

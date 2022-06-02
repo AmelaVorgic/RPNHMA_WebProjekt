@@ -1,0 +1,18 @@
+<div class="card my-4">
+    <h5 class="card-header">Add comment.</h5>
+    <div class="card-body">
+        <form (ngSubmit)="onAddComment()" #f="ngForm">
+            <div class="form-group">
+                <textarea
+                    [disabled]="!authService.isAuthenticated()"
+                    [placeholder]="!authService.isAuthenticated() ? 'Login to comment' : ''"
+                    class="form-control"
+                    rows="4"
+                    required
+                    ngModel
+                    name="content"></textarea>
+            </div>
+            <button [disabled]="!authService.isAuthenticated()" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
