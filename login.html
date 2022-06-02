@@ -28,7 +28,7 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center justify-content-lg-between">
       <h1 class="logo me-auto me-lg-0" style="font-size:20px"><a href="index.html">BACK</a></h1>
-      <a href="#about" class="get-started-btn scrollto">Register</a>
+      <a href="register.html" class="get-started-btn scrollto">Register</a>
     </div>
   </header>
 
@@ -39,14 +39,15 @@
         <form class="login" th:action="@{/login}" method="post">
             <div class="login__field">
                 <i class="login__icon fas fa-user"></i>
-                <input type="text" class="login__input" placeholder="User name / Email">
+                <input type="text" class="login__input" placeholder="User name / E-mail">
             </div>
             <div class="login__field">
                 <i class="login__icon fas fa-lock"></i>
                 <input type="password" class="login__input" placeholder="Password">
             </div>
+
             <button class="button login__submit">
-                <span class="button__text">Log In Now</span>
+                <span class="button__text">Login</span>
                 <i class="button__icon fas fa-chevron-right"></i>
             </button>				
         </form>

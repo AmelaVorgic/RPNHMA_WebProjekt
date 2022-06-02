@@ -1,35 +1,53 @@
 package com.rpnhma.rpnhma_webApplication.model;
 
-import lombok.Data;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.time.LocalDate;
+import java.util.Set;
 
+@Entity(name = "users")
 @Data
-@Entity
-@EntityListeners(AuditingEntityListener.class)
-@Table(name = "user")
-@DynamicInsert
-@DynamicUpdate
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
-
     @Id
-    @Column(nullable = false)
     @GeneratedValue
-    private String Id;
+    private Long id;
 
-    @Column(name = "username")
-    private String userName;
+    @Column(unique = true)
+    @Size(min = 4, max = 20)
+    private String username;
 
-    @OneToMany(mappedBy = "user")
-    private List<Topic> topics;
+    @NotNull
+    private String password;
 
-    @OneToMany(mappedBy = "user")
-    private List<Answer> answers;
+    @Column(unique = true)
+    @Email
+    private String email;
 
+    @Size(max = 30)
+    private String firstName;
 
+    @Size(max = 30)
+    private String lastName;
+
+    @NotNull
+    private Boolean isActive = true;
+
+    private String avatarUrl;
+
+    @NotNull
+    private LocalDate dateOfSignUp = LocalDate.now();
+
+    @NotNull
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @JoinTable(name = "USER_ROLES", joinColumns = {
+            @JoinColumn(name = "USER_ID")}, inverseJoinColumns = {
+            @JoinColumn(name = "ROLE_ID")})
+    private Set<Role> roles;
 }

@@ -38,12 +38,7 @@
           <li><a class="nav-link scrollto" href="about.html" >About</a></li>
           <li><a class="nav-link scrollto" href="news.html" >News</a></li>
           <li><a class="nav-link scrollto active" href="forum.html" >Forum</a></li>
-          <li class="dropdown"><a href="species.html"><span>Species</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown"><a href="#"><span>Specie 1</span></a></li>
-              <li class="dropdown"><a href="#"><span>Specie 2</span></a></li>
-            </ul>
-          </li>
+          <li><a class="nav-link scrollto" href="species.html" >Species</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -70,11 +65,13 @@
     </section>
 
     <section class="inner-page">
-      <div class="container">
-        <p>
-        Forum
-        </p>
+      <div class="container" style="border: 1px solid rgba(248, 200, 225, 0.15); padding: 10px; border-radius: 4%;">
+        Topic
+        <div class="forumTable">
+        </div>
       </div>
+
+      <input type="button" value="Generate a row" onclick="generate_row()">
     </section>
 
   </main>
@@ -101,8 +98,18 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function generate_row(){
+     $( ".forumTable" ).
+     append( $("<div>Tekst</div>")
+     .css("background-color", "rgba(221, 215, 218, 0.64)")
+     .css("padding", "10px")
+     .css("margin-top","10px") );
+    }
+  </script>
 
 </body>
 
