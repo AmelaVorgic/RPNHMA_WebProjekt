@@ -29,6 +29,8 @@ import {TokenStorage} from "./token.storage";
 import {AuthGuard} from "./auth/auth-guard.service";
 import {UserService} from "./service/user.service";
 import {SearchResultComponent} from './posts/search-result/search-result.component';
+import { HomeComponent } from './home/home.component';
+
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import {SearchResultComponent} from './posts/search-result/search-result.compone
         SignupComponent,
         SigninComponent,
         SearchResultComponent,
+        HomeComponent,
+
     ],
     imports: [
         BrowserModule,

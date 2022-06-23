@@ -45,101 +45,30 @@ export class PostsAddComponent implements OnInit {
     private addCategories() {
         let newCategories: string[] = [];
 
-        if (this.addPostForm.value.categories.celebrity === true) {
-            newCategories.push('CELEBRITY');
+        if (this.addPostForm.value.categories.tarantulas === true) {
+            newCategories.push('TARANTULAS');
         }
 
-        if (this.addPostForm.value.categories.animal === true) {
-            newCategories.push('ANIMAL');
+        else if (this.addPostForm.value.categories.care === true) {
+            newCategories.push('CARE');
         }
 
-        if (this.addPostForm.value.categories.people === true) {
-            newCategories.push('PEOPLE');
+        else if (this.addPostForm.value.categories.help === true) {
+            newCategories.push('HELP');
         }
 
-        if (this.addPostForm.value.categories.curiosity === true) {
-            newCategories.push('CURIOSITY');
+        else if (this.addPostForm.value.categories.moult === true) {
+            newCategories.push('MOULT');
         }
 
-        if (this.addPostForm.value.categories.science === true) {
-            newCategories.push('SCIENCE');
+        else if (this.addPostForm.value.categories.feeding === true) {
+            newCategories.push('FEEDING');
+        }
+        else{
+            newCategories.push('OTHER')
         }
 
-        if (this.addPostForm.value.categories.funny === true) {
-            newCategories.push('FUNNY');
-        }
 
-        if (this.addPostForm.value.categories.nature === true) {
-            newCategories.push('NATURE');
-        }
-
-        if (this.addPostForm.value.categories.interestingPlace === true) {
-            newCategories.push('INTERESTING_PLACE');
-        }
-
-        if (this.addPostForm.value.categories.art === true) {
-            newCategories.push('ART');
-        }
-
-        if (this.addPostForm.value.categories.movie === true) {
-            newCategories.push('MOVIE');
-        }
-
-        if (this.addPostForm.value.categories.fashion === true) {
-            newCategories.push('FASHION');
-        }
-
-        if (this.addPostForm.value.categories.sale === true) {
-            newCategories.push('SALE');
-        }
-
-        if (this.addPostForm.value.categories.music === true) {
-            newCategories.push('MUSIC');
-        }
-
-        if (this.addPostForm.value.categories.culture === true) {
-            newCategories.push('CULTURE');
-        }
-
-        if (this.addPostForm.value.categories.sport === true) {
-            newCategories.push('SPORT');
-        }
-
-        if (this.addPostForm.value.categories.warszawa === true) {
-            newCategories.push('WARSZAWA');
-        }
-
-        if (this.addPostForm.value.categories.lublin === true) {
-            newCategories.push('LUBLIN');
-        }
-
-        if (this.addPostForm.value.categories.poznan === true) {
-            newCategories.push('POZNAN');
-        }
-
-        if (this.addPostForm.value.categories.kielce === true) {
-            newCategories.push('KIELCE');
-        }
-
-        if (this.addPostForm.value.categories.katowice === true) {
-            newCategories.push('KATOWICE');
-        }
-
-        if (this.addPostForm.value.categories.gdansk === true) {
-            newCategories.push('GDANSK');
-        }
-
-        if (this.addPostForm.value.categories.gdynia === true) {
-            newCategories.push('GDYNIA');
-        }
-
-        if (this.addPostForm.value.categories.krakow === true) {
-            newCategories.push('KRAKOW');
-        }
-
-        if (this.addPostForm.value.categories.wroclaw === true) {
-            newCategories.push('WROCLAW');
-        }
 
         return newCategories;
     }

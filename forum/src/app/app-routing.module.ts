@@ -8,6 +8,7 @@ import {SignupComponent} from "./auth/signup/signup.component";
 import {SigninComponent} from "./auth/signin/signin.component";
 import {AuthGuard} from "./auth/auth-guard.service";
 import {SearchResultComponent} from "./posts/search-result/search-result.component";
+import {HomeComponent} from "./home/home.component"
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/posts-list', pathMatch: 'full'},
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
     {path: 'posts/edit/:id', component: PostEditComponent, canActivate: [AuthGuard]},
     {path: 'search-result', component: SearchResultComponent},
     {path: 'signup', component: SignupComponent},
-    {path: 'signin', component: SigninComponent}
+    {path: 'signin', component: SigninComponent},
+    {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({

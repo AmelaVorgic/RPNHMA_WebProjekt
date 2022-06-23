@@ -1,24 +1,7 @@
 package com.rpnhma.rpnhma_webApplication;
 
-import com.rpnhma.rpnhma_webApplication.commons.Category;
-import com.rpnhma.rpnhma_webApplication.model.Comment;
-import com.rpnhma.rpnhma_webApplication.model.Post;
-import com.rpnhma.rpnhma_webApplication.model.Role;
-import com.rpnhma.rpnhma_webApplication.model.User;
-import com.rpnhma.rpnhma_webApplication.repositpry.RoleRepository;
-import com.rpnhma.rpnhma_webApplication.repositpry.UserRepository;
-import com.rpnhma.rpnhma_webApplication.service.CommentService;
-import com.rpnhma.rpnhma_webApplication.service.UserService;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @SpringBootApplication
 public class RpnhmaWebApplication {
@@ -28,7 +11,7 @@ public class RpnhmaWebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RpnhmaWebApplication.class, args);
 	}
-
+/*
 	@Bean
 	CommandLineRunner runner(CommentService commentService, RoleRepository roleRepository, UserService userService, UserRepository userRepository) {
 		return args -> {
@@ -75,5 +58,5 @@ public class RpnhmaWebApplication {
 			roleRepository.save(userRole);
 		};
 	}
-
+*/
 }
