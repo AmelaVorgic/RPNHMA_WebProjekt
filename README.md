@@ -14,10 +14,8 @@ One of the features application offers is ability to log in as a user and use fo
 - HTML
 - CSS
 - JavaScript
-- PHP
-- Database Firebase
-- NewsAPI
-- ...
+- Angular
+- Spring Boot
 
 ## IDE  
 - Visual Studio Code
